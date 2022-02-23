@@ -11,7 +11,7 @@ public class SnakeLadderGame {
         //VARIABLES
         int currentPosition = 0;
 
-        while (currentPosition <= TARGETPOSITION) {
+        while (currentPosition != TARGETPOSITION) {
             //VARIABLES
             int dieRoll = (int) Math.floor(Math.random() * 10) % 6 + 1;
             int chooseOption = (int) Math.floor(Math.random() * 10) % 3;
@@ -19,11 +19,13 @@ public class SnakeLadderGame {
             switch (chooseOption) {
                 case SNAKE -> {
                     currentPosition -= dieRoll;
-                    currentPosition = currentPosition < 0 ? 0 : currentPosition;
-                    System.out.println("Position1 decremented");
+                    currentPosition = Math.max(currentPosition, 0);
                 }
 
-                case LADDER -> currentPosition += dieRoll;
+                case LADDER -> {
+                    currentPosition += dieRoll;
+                    currentPosition = currentPosition > 100 ? currentPosition -= dieRoll : currentPosition;
+                }
 
                 default -> {
                     currentPosition += 0;
