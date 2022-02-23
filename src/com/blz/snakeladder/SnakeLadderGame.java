@@ -10,31 +10,36 @@ public class SnakeLadderGame {
 
         //VARIABLES
         int currentPosition = 0;
+        int dieCount = 0;
 
         while (currentPosition != TARGETPOSITION) {
             //VARIABLES
             int dieRoll = (int) Math.floor(Math.random() * 10) % 6 + 1;
+            dieCount++;
             int chooseOption = (int) Math.floor(Math.random() * 10) % 3;
 
             switch (chooseOption) {
                 case SNAKE -> {
                     currentPosition -= dieRoll;
                     currentPosition = Math.max(currentPosition, 0);
+                    System.out.println("Snake option and player is at " + currentPosition);
                 }
-
                 case LADDER -> {
                     currentPosition += dieRoll;
                     currentPosition = currentPosition > 100 ? currentPosition -= dieRoll : currentPosition;
+                    System.out.println("Ladder option and player is at " + currentPosition);
                 }
 
                 default -> {
                     currentPosition += 0;
-                    System.out.println("NO PLAY");
+                    System.out.println("No Play option and player is at " + currentPosition);
+
                 }
 
             }
-            System.out.println("Player is at " + currentPosition + "  position");
+            System.out.println("Player won at " + currentPosition + " position");
+            System.out.println("dice was rolled " + dieCount + " times");
         }
-    }
 
+    }
 }

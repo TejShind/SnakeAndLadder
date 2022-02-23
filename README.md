@@ -5,3 +5,4 @@
 4) Check fot option No play,Ladder and Snake.
 5) Repeat till the player reaches the winning position.
 6)Exact at winning position.
+7)Number of times the dice was played to win the game.
