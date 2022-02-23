@@ -1,3 +1,3 @@
 # SnakeAndLadder
-1) Welocme to the Sanake and Ladder Game!
-2) 
+1) Welcome to the Snake and Ladder Game!
+2) Player at Zero position.
