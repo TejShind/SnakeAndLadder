@@ -6,3 +6,4 @@
 5) Repeat till the player reaches the winning position.
 6)Exact at winning position.
 7)Number of times the dice was played to win the game.
+8)Two players play the game.
