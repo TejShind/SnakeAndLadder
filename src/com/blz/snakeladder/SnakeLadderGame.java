@@ -7,3 +7,4 @@ public class SnakeLadderGame {
         System.out.println(" Welcome to the Snake and Ladder Game");
     }
 }
+
